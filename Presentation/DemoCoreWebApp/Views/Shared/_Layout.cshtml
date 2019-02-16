@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DemoCoreWebApp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+</head>
+<body>
+    <header>
+        <div class="container-fluid header-upper-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a class="social-icon" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="social-icon" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="social-icon" href="#"><i class="fa fa-dribbble"></i></a>
+                        <a class="social-icon" href="#"><i class="fa fa-vimeo"></i></a>
+                        <a class="social-icon" href="#"><i class="fa fa-tumblr"></i></a>
+                    </div>
+                    <div class="col-sm-9 text-right">
+                        <span>
+                            <a class="link-color" href='#'>Log in</a><small>or</small>
+                            <a class="link-color" asp-controller="Customer" asp-action="Register">Create an account</a>
+                        </span>
+                        <a class="link-color" href="#"><i class="fa fa-search"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container header-down-bar">
+            <div class="row">
+              
+            </div>
+        </div>
+        <div class="mini-bar"></div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            @RenderBody()
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid mini-bar"></div>
+        <div class="container-fluid footer-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h4>Information</h4>
+                        <ul>
+                            <li><a href="#">&raquo; Sitemap</a></li>
+                            <li><a href="#">&raquo; Shipping & returns</a></li>
+                            <li><a href="#">&raquo; Privacy notice</a></li>
+                            <li><a href="#">&raquo; Conditions of Use</a></li>
+                            <li><a href="#">&raquo; About us</a></li>
+                            <li><a href="#">&raquo; Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Customer service</h4>
+                        <ul>
+                            <li><a href="#">&raquo; Search</a></li>
+                            <li><a href="#">&raquo; News</a></li>
+                            <li><a href="#">&raquo; Blog</a></li>
+                            <li><a href="#">&raquo; Recently viewed products</a></li>
+                            <li><a href="#">&raquo; Compare products list</a></li>
+                            <li><a href="#">&raquo; New products</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>My account</h4>
+                        <ul>
+                            <li><a href="#">&raquo; My Account</a></li>
+                            <li><a href="#">&raquo; Orders</a></li>
+                            <li><a href="#">&raquo; Addresses</a></li>
+                            <li><a href="#">&raquo; Shopping cart</a></li>
+                            <li><a href="#">&raquo; Wishlist</a></li>
+                            <li><a href="#">&raquo; Apply for vendor account</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h4>Follow us on </h4>
+                        <a class="social-icon" href="#"><i class="fa fa-twitter"></i></a>
+                        <a class="social-icon" href="#"><i class="fa fa-facebook"></i></a>
+                        <a class="social-icon" href="#"><i class="fa fa-dribbble"></i></a>
+                        <a class="social-icon" href="#"><i class="fa fa-vimeo"></i></a>
+                        <a class="social-icon" href="#"><i class="fa fa-tumblr"></i></a>
+                        <h4>Newsletter  </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="~/js/site.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

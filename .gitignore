@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Libraries/DemoCoreWebApp.Core/bin/Debug
+/.vs
+/Libraries/DemoCoreWebApp.Core/obj
+/Libraries/DemoCoreWebApp.Data/bin/Debug
+/Libraries/DemoCoreWebApp.Data/obj
+/Presentation/DemoCoreWebApp/bin/Debug/netcoreapp2.2
+/Presentation/DemoCoreWebApp/obj
