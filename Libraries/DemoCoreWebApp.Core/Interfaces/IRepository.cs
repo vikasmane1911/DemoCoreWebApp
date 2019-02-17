@@ -8,7 +8,7 @@ namespace DemoCoreWebApp.Core.Interfaces
     {
         IQueryable<TEntity> GetAll();
 
-        Task<TEntity> GetById(int id);
+        Task<TEntity> GetById(int? id);
 
         Task CreateAsync(TEntity entity);
 

@@ -20,7 +20,7 @@ namespace DemoCoreWebApp.Data
             return _dbContext.Set<TEntity>().AsNoTracking();
         }
 
-        public async Task<TEntity> GetById(int id)
+        public async Task<TEntity> GetById(int? id)
         {
             return await _dbContext.Set<TEntity>()
                 .AsNoTracking()

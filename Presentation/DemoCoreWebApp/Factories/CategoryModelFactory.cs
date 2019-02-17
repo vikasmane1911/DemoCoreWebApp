@@ -25,6 +25,32 @@ namespace DemoCoreWebApp.Web.Factories
 
         #region Public Methods
 
+        public async Task UpdateCategory(CategoryModel categoryModel)
+        {
+            Category category = new Category
+            {
+                Id = categoryModel.Id,
+                Name = categoryModel.Name,
+                Description = categoryModel.Description
+            };
+
+            await _categoryService.UpdateCategory(category);
+        }
+
+        public async Task<CategoryModel> PrepareCategoryModelById(int? id)
+        {
+            var category = await _categoryService.GetCategoryById(id);
+
+            CategoryModel categoryModel = new CategoryModel
+            {
+                Id = category.Id,
+                Name = category.Name,
+                Description = category.Description
+            };
+
+            return categoryModel;
+        }
+
         public async Task AddCategory(CategoryModel categoryModel)
         {
             Category category = new Category

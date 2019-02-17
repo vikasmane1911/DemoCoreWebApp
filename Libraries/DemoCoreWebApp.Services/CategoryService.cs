@@ -26,6 +26,21 @@ namespace DemoCoreWebApp.Services
 
         #region Public Methods
 
+        public bool CategoryExists(int Id)
+        {
+            return _categoryRepository.GetAll().Any(category => category.Id == Id);
+        }
+
+        public async Task UpdateCategory(Category category)
+        {
+            await _categoryRepository.UpdateAsync(category.Id, category);
+        }
+
+        public async Task<Category> GetCategoryById(int? id)
+        {
+            return await _categoryRepository.GetById(id);
+        }
+
         public async Task InsertCategory(Category category)
         {
             await _categoryRepository.CreateAsync(category);
