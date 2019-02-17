@@ -1,7 +1,8 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using DemoCoreWebApp.Core.Interfaces;
-using DemoCoreWebApp.Data.Repositories;
+using DemoCoreWebApp.Data;
+using DemoCoreWebApp.Services;
 using DemoCoreWebApp.Web.Factories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,8 +16,14 @@ namespace DemoCoreWebApp.Web.Extenstions
         {
             var containerBuilder = new ContainerBuilder();
 
-            containerBuilder.RegisterType<PatientModelFactory>().As<IPatientModelFactory>().InstancePerLifetimeScope();
-            containerBuilder.RegisterType<PatientRepository>().As<IPatientRepository>().InstancePerLifetimeScope();
+            //Factories
+            containerBuilder.RegisterType<CategoryModelFactory>().As<ICategoryModelFactory>().InstancePerLifetimeScope();
+
+            //Services
+            containerBuilder.RegisterType<CategoryService>().As<ICategoryService>().InstancePerLifetimeScope();
+
+            //repository
+            containerBuilder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
 
             //populate Autofac container builder with the set of registered service descriptors
             containerBuilder.Populate(services);

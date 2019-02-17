@@ -71,7 +71,7 @@ namespace DemoCoreWebApp.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Patient}/{action=Index}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
 

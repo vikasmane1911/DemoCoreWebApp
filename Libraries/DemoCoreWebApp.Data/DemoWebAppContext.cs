@@ -10,11 +10,11 @@ namespace DemoCoreWebApp.Data
         {
         }
 
-        public DbSet<Patient> Patients { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new PatientMap());
+            modelBuilder.ApplyConfiguration(new CategoryMap());
         }
     }
 }

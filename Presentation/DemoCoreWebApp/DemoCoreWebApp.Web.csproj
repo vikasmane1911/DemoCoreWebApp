@@ -5,7 +5,15 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <AssemblyName>DemoCoreWebApp.Web</AssemblyName>
     <RootNamespace>DemoCoreWebApp.Web</RootNamespace>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\bower_components\**" />
+    <Content Remove="wwwroot\bower_components\**" />
+    <EmbeddedResource Remove="wwwroot\bower_components\**" />
+    <None Remove="wwwroot\bower_components\**" />
+  </ItemGroup>
 
 
   <ItemGroup>
@@ -18,13 +26,9 @@
 
 
   <ItemGroup>
-    <Folder Include="Views\Shared\Components\" />
-  </ItemGroup>
-
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Libraries\DemoCoreWebApp.Core\DemoCoreWebApp.Core.csproj" />
     <ProjectReference Include="..\..\Libraries\DemoCoreWebApp.Data\DemoCoreWebApp.Data.csproj" />
+    <ProjectReference Include="..\..\Libraries\DemoCoreWebApp.Services\DemoCoreWebApp.Services.csproj" />
   </ItemGroup>
 
 </Project>

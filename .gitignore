@@ -9,3 +9,8 @@
 /Libraries/DemoCoreWebApp.Data/obj
 /Presentation/DemoCoreWebApp/bin/Debug/netcoreapp2.2
 /Presentation/DemoCoreWebApp/obj
+/DemoCoreWebApp.Services/bin/Debug/netcoreapp2.2
+/DemoCoreWebApp.Services/obj
+/DemoCoreWebApp.Web.Framework/bin/Debug/netcoreapp2.2
+/Libraries/DemoCoreWebApp.Services/bin/Debug/netcoreapp2.2
+/Libraries/DemoCoreWebApp.Services/obj
